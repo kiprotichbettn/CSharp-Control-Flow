@@ -1,18 +1,26 @@
-﻿using System;
+﻿
 
-string techStream = "AI,Machine Learning,Web Development,Cloud Computing,Cybersecurity";
-string[] technologies = techStream.Split(',');
+string[] subjects = { "Math", "Programming", "AI", "Databases", "Networking" };
 
-Array.Sort(technologies);
+Console.WriteLine("=== Subject Difficulty Check ===\n");
 
-foreach (var tech in technologies)
+for (int i = 0; i < subjects.Length; i++)
 {
-    if (tech.Contains(" "))
+    string subject = subjects[i];
+
+    if (subject == "AI" || subject == "Programming")
     {
-        Console.WriteLine($"{tech}\t- Multi-word");
+        Console.WriteLine($"{subject} - Advanced");
+    }
+    else if (subject == "Math" || subject == "Databases")
+    {
+        Console.WriteLine($"{subject} - Intermediate");
     }
     else
     {
-        Console.WriteLine($"{tech}\t- Single-word");
+        Console.WriteLine($"{subject} - Beginner");
     }
 }
+
+Console.WriteLine("\nPress any key to exit...");
+Console.ReadKey();

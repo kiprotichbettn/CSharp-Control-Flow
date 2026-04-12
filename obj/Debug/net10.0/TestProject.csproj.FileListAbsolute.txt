@@ -12,3 +12,4 @@ C:\Users\Bett\PycharmProjects\csharp-projects\CsharpProjects\TestProject\obj\Deb
 C:\Users\Bett\PycharmProjects\csharp-projects\CsharpProjects\TestProject\obj\Debug\net10.0\TestProject.pdb
 C:\Users\Bett\PycharmProjects\csharp-projects\CsharpProjects\TestProject\obj\Debug\net10.0\TestProject.genruntimeconfig.cache
 C:\Users\Bett\PycharmProjects\csharp-projects\CsharpProjects\TestProject\obj\Debug\net10.0\ref\TestProject.dll
+C:\Users\Bett\PycharmProjects\csharp-projects\CsharpProjects\TestProject\obj\Debug\net10.0\TestProject.sourcelink.json
