@@ -1,26 +1,65 @@
-﻿
+﻿string[] students = { "Nickson", "Mary", "John", "Grace", "Alex" };
+int[] scores = { 85, 72, 49, 91, 60 };
 
-string[] subjects = { "Math", "Programming", "AI", "Databases", "Networking" };
+Console.WriteLine($"=== Student Grade Analyzer ===\n");
 
-Console.WriteLine("=== Subject Difficulty Check ===\n");
-
-for (int i = 0; i < subjects.Length; i++)
+for (int i = 0; i < students.Length; i++)
 {
-    string subject = subjects[i];
+    string grade = GetGrade(scores[i]);
 
-    if (subject == "AI" || subject == "Programming")
+    Console.WriteLine($"Student: {students[i]}");
+    Console.WriteLine($"Score: {scores[i]}");
+    Console.WriteLine($"Grade: {grade}");
+
+    if (scores[i] >= 50)
     {
-        Console.WriteLine($"{subject} - Advanced");
-    }
-    else if (subject == "Math" || subject == "Databases")
-    {
-        Console.WriteLine($"{subject} - Intermediate");
+        Console.WriteLine($"Status: Passed");
     }
     else
     {
-        Console.WriteLine($"{subject} - Beginner");
+        Console.WriteLine($"Status: Failed");
     }
+
+    switch (grade)
+    {
+        case "A":
+            Console.WriteLine($"Comment: Excellent.");
+            break;
+
+        case "B":
+            Console.WriteLine($"Comment: Good.");
+            break;
+
+        case "C":
+            Console.WriteLine($"Comment: Need to Improve.");
+            break;
+
+        case "D":
+            Console.WriteLine($"Comment: Passed.");
+            break;
+
+        default:
+            Console.WriteLine($"Comment: Retake.");
+            break;
+    }
+
+    Console.WriteLine($"\n----------------------\n");
 }
 
-Console.WriteLine("\nPress any key to exit...");
-Console.ReadKey();
+static string GetGrade(int score)
+{
+    if (score >= 80)
+        return "A";
+
+    else if (score >= 70)
+        return "B";
+
+    else if (score >= 60)
+        return "C";
+
+    else if (score >= 50)
+        return "D";
+
+    else
+        return "F";
+}
